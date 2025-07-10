@@ -1,2 +1,2 @@
 # clippeler1.com
-new
+web
