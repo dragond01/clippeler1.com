@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>clippeler1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <!-- Background Geser -->
+  <div id="bgSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="11.jpg" class="d-block w-100" alt="Background 1">
+      </div>
+      <div class="carousel-item">
+        <img src="12.jpg" class="d-block w-100" alt="Background 2">
+      </div>
+      <div class="carousel-item">
+        <img src="13.jpg" class="d-block w-100" alt="Background 3">
+      </div>
+    </div>
+  </div>
+
+  <!-- Konten Overlay -->
+  <div class="overlay-content">
+    <img src="p.png" alt="Foto Profil" />
+    <h1>@clippeler1</h1>
+    <p>Selamat datang di semua link pentingku 👇</p>
+
+    <a class="link-btn" href="https://tiktok.com/@clippeler1" target="_blank">🪄 TikTok Saya</a>
+    <a class="link-btn" href="https://akademicrypto.com/" target="_blank">📊 Academy Crypto</a>
+    <a class="link-btn" href="https://ternakuang.id/" target="_blank">💰 Ternak Uang</a>
+  <!--<a class="link-btn" href="https://shopee.co.id/zexo" target="_blank">🛒 Shopee</a> -->
+    <a class="link-btn" href="https://youtube.com/@timothyronald?si=uUrF1U9JiGbj50FD" target="_blank">▶️ YouTube timothyronald</a>
+  </div>
+
+  <!-- Suara Klik -->
+  <audio id="clickSound" src="1.wav" preload="auto"></audio>
+
+  <!-- Script Suara Klik -->
+  <script>
+    function playSound() {
+      const audio = document.getElementById("clickSound");
+      if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const buttons = document.querySelectorAll(".link-btn");
+      buttons.forEach(btn => {
+        btn.addEventListener("click", playSound);
+      });
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Background Music -->
+<audio id="bgMusic" src="jj.mp3" autoplay loop preload="auto"></audio>
+
+<!-- Bootstrap Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Trigger Musik (jaga-jaga agar tetap play di HP) -->
+<script>
+  document.addEventListener('click', function () {
+    const bgMusic = document.getElementById("bgMusic");
+    if (bgMusic && bgMusic.paused) {
+      bgMusic.play();
+    }
+  }, { once: true });
+  
+</script>
+</body>
+</html>
